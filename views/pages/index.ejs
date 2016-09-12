@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 
-  <!-- Head partial -->
-  <%- include ../partials/head %>
-
-</head>
-<body>
-
-  <div id="body">
-    <h3>LinkedIn Auth Test</h3>
-
-    <h3>Hello World!!</h3>
-
-  </div>
-
-</body>
-</html>
+    <% if (!user) { %>
+    	<h2>Welcome! Please log in.</h2>
+      <a href="/login">Login</a>
+    <% } else { %>
+    	<h2>Hello, <%= profile.displayName %>.</h2>
+    <% } %>
